@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    
     environment {
         DOCKER_HUB_REPO = "saigopi123456/tomcat"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
@@ -10,7 +9,6 @@ pipeline {
         ftp_proxy = 'http://127.0.0.1:3128/'
         socks_proxy = 'socks://127.0.0.1:3128/'
     }
-
     stages {
         stage ('Docker Image Build') {
             steps {
